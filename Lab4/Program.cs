@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
@@ -18,7 +18,13 @@ public class Program
     {
         int answer = 0;
         // code here
-
+        for (int i=0; i<A.GetLength(0); i++)
+        {
+            for (int j = 0; j < A.GetLength(1); j++)
+            {
+                answer += A[i, j];
+            }
+        }
         // end
 
         return answer;
@@ -27,7 +33,21 @@ public class Program
     {
         double answer = 0;
         // code here
+        double amount = 0; // amount of positive elements
 
+        for (int i = 0; i < A.GetLength(0); i++)
+        {
+            for (int j = 0; j < A.GetLength(1); j++)
+            {
+                if (A[i, j] > 0)
+                { 
+                    answer += A[i, j];
+                    amount++;
+                }
+            }
+        }
+
+        if (answer != 0) { answer /= amount; }
         // end
 
         return answer;
@@ -299,7 +319,7 @@ public class Program
 
         return A;
     }
-    #endregion
+    
     public int[,] Task_2_2(int[,] A)
     {
         // code here
@@ -365,6 +385,8 @@ public class Program
 
         return A;
     }
+
+    #endregion
 
     #region Level 3
     public int[,] Task_3_1(int[,] matrix)
