@@ -11,7 +11,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-
+        // :3
     }
     #region Level 1
     public int Task_1_1(int[,] A)
