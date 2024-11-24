@@ -15,6 +15,16 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
+        int[,] matrix = {
+                { 1, 2, -3, 7, 7, 0 },
+                { 5, 6, -7, 9, -11, 1 },
+                { 9, 10, 11, 15, 15, 2 },
+                { -13, 14, 5, 25, -19, 3 },
+                { 5, 6, -7, 8, -99, 4},
+                { 0, 0, -1, -2, -3, 5 }
+            };
+        int k = 2;
+        program.Task_3_5(matrix,k);
 
     }
     #region Level 1
@@ -1080,28 +1090,19 @@ public class Program
                 }
             }
         }
-        int per = 0;
-        for (int i = 0; i < nom1 - k + 1;i++)
-        {
             for (int j = 0; j < matrix.GetLength(0); j++)
-                A[j] = matrix[nom1 - per, j];
+                A[j] = matrix[nom1, j];
             for (int j = 0; j < matrix.GetLength(0); j++)
-                matrix[nom1 - per,j] = matrix[nom1 - per - 1,j];
+                matrix[nom1,j] = matrix[k-1,j];
             for (int j = 0; j < matrix.GetLength(0); j++)
-                matrix[nom1 - per - 1, j] = A[j];
-            per++;
-        }
-        per = 0;    
-        for (int i = 0; i < nom2 - k + 1; i++)
-        {
+                matrix[k-1, j] = A[j];
+
             for (int j = 0; j < matrix.GetLength(0); j++)
-                A[j] = matrix[j,nom2 - per];
+                A[j] = matrix[j,nom2];
             for (int j = 0; j < matrix.GetLength(0); j++)
-                matrix[j,nom2 - per] = matrix[j,nom2 - per - 1];
+                matrix[j,nom2] = matrix[j,k-1];
             for (int j = 0; j < matrix.GetLength(0); j++)
-                matrix[j,nom2 - per - 1] = A[j];
-            per++;
-        }
+                matrix[j,k-1] = A[j];
         // end
         return matrix;
         
