@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestPlatform.Utilities;
+﻿using Microsoft.VisualStudio.TestPlatform.Utilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -517,14 +517,14 @@ namespace Tests
                 { 5, 6, -7, 8, 9, -10, -11 },
                 { 9, 10, 11, 12, 13, 14, 15 },
                 { -13, 14, 15, 16, 17, -18, -19 },
-                { -1, -2, -3, -4, -5, -6, 0 }
+                { 0, -1, -2, -3, -4, -5, -6 }
             };
             double[,] outputC, answer = new double[,] {
                 { 1, 2, -0.42857142857142855, 4, -0.7142857142857143, 6, 7 },
                 { 5, 6, -0.7777777777777778, 8, 9, -10, -11 },
                 { 9, 10, 11, 12, 13, 14, 15 },
                 { -0.7647058823529411, 14, 15, 16, 17, -18, -19 },
-                { -1, -2, -3, -4, -5, -6, 0 }
+                { 0, -1, -2, -3, -4, -5, -6 }
             };
             // Act
             outputC = main.Task_1_19(matrix, matrix.GetLength(0), matrix.GetLength(1));
@@ -1070,8 +1070,8 @@ namespace Tests
             int[,] outputC, outputE, answer = new int[,] {
                 { 1, 2, -3, 7, 7 },
                 { 5, 6, -7, 9, -11 },
-                { 0, 10, 11, 15, 2 },
-                { -13, 0, 3, 0, -19 },
+                { 0, 10, 11, 15, 3 },
+                { -13, 0, 4, 0, -19 },
                 { 5, 6, -7, 8, 9},
                 { -13, 14, 25, 25, -19 },
                 { 0, 0, -1, -2, -3 }
@@ -1194,8 +1194,8 @@ namespace Tests
             double[,] outputC, outputE, answer = new double[,] {
                 { 1, 2, -3, 7, 7 },
                 { 5, 6, -7, 9, -11 },
-                { 2, 10, 11, 15, 2 },
-                { -13, 3, 3, 3, -19 },
+                { 3, 10, 11, 15, 3 },
+                { -13, 4, 4, 4, -19 },
                 { 5, 6, -7, 8, 9},
                 { -13, 14, 25, 25, -19 },
                 { 0, 0, -1, -2, -3 }
