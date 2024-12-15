@@ -329,11 +329,11 @@ namespace Tests
         {
             // Arrange
             int[,] matrix = {
-                { 1, 2, 3, 4, -5 },
-                { 5, 11, -17, 11, 7 },
+                { 1,  2,   3,   4,   -5 },
+                { 5,  11,  -17, 11,  7 },
                 { -9, -10, -11, -14, -15 },
                 { -9, -10, -11, -14, -6 },
-                { 0, -2, -3, -4, -5 }
+                { 0,  -2,  -3,  -4,  -5 }
             };
             int[,] error = new int[rand.Next(0, 3), rand.Next(8, 10)];
             int[,] outputC, outputE, answer = new int[,] {
